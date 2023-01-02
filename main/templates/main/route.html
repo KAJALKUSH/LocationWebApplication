@@ -4,36 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Web Mapping Platform</title>
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.css" type="text/css">
     <style>
-        body { margin: 0; padding: 0; }
-        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+        body { margin: 0.5pc; padding: 0.5pc; background: radial-gradient(circle,grey,white);}
     </style>
 </head>
 
 <body>
-    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.js"></script>
-    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.css" type="text/css">
- 
+    <h2 >Location Based Web App</h2>
 <style>
     .directions {
-        position: static;
-        /* z-index: 1; */
-        width: 20%;
-        left: 20%;
-        /* margin-left: -25%; */
-        /* top: 10px; */
+        position:relative;
+        width: 20pc;
     }
     .mapboxgl-ctrl-directions {
         min-width: 100%;
     }
     #map {
-        position: absolute;
-        width: 80%;
-        left: 20%;
+        position:absolute;
+        top: 1pc; 
+        right: 1pc;
+        bottom: 1pc;
+        left: 22pc;
     }
+
 </style>
  
 <div id="map"></div>
@@ -45,11 +43,11 @@
     const map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v12',
-        center: [-79.4512, 43.6568],
-        zoom: 13
+        center: [77.5913,12.97912],
+        zoom: 10
     });
  
-// Add the control to the map.
+
     const directions = new MapboxDirections({
         accessToken: mapboxgl.accessToken,
         mapboxgl: mapboxgl
