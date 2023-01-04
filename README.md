@@ -30,5 +30,5 @@ To deploy this project run
 
 - Anmol Jawalkar
 - Kajal Kushwaha
-- Mayur Choudhary
+- Mayur Choudhary   
 - Sai Vamshi
