@@ -20,6 +20,12 @@ Installation of requests
  py -m pip install requests
  ```
  
+ ## Migrations :
+Install Migrate
+```bash
+ py -m pip install migrate
+```
+ 
 ## Deployment :
 To deploy this project run
 ```bash
